@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kai Early Years</title>
+
+<style>
+:root {
+  --navy: #172d47;
+  --red: #e75353;
+  --stone-text: #afa199;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e75353 0%, #a2dada 40%, #d0e3a3 100%);
+  display: flex;
+  justify-content: center;
+  padding: 50px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 320px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(23,45,71,0.6), rgba(23,45,71,0.4));
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 12px;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTIONS */
+.section {
+  padding: 32px 24px 0;
+}
+
+.section-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: var(--navy);
+}
+
+/* CTA */
+.cta {
+  display: block;
+  padding: 16px;
+  margin-bottom: 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 500;
+  background: #f5f5f5;
+  color: var(--navy);
+  transition: all 0.3s ease;
+}
+
+.cta.primary {
+  background: var(--red);
+  color: white;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* SCROLL */
+.scroll-wrapper {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 14px;
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARDS */
+.card {
+  flex: 0 0 220px;
+  background: white;
+  border-radius: 26px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--navy);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  font-size: 14px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* SOCIAL */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 40px 0;
+}
+
+.socials a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socials svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--navy);
+}
+
+.socials a:hover {
+  background: var(--red);
+}
+
+.socials a:hover svg {
+  fill: white;
+}
+
+.footer-space {
+  height: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="https://picsum.photos/800/600?school" class="hero-image" alt="">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="https://via.placeholder.com/90" class="logo" alt="Logo">
+      <h1>Kai Early Years</h1>
+      <p>IB & Montessori Preschool</p>
+    </div>
+  </div>
+
+  <!-- ADMISSIONS -->
+  <div class="section">
+    <a href="#" class="cta primary">Apply for Admission</a>
+    <a href="#" class="cta">Book a Campus Visit</a>
+    <a href="#" class="cta">Talk to Admissions</a>
+  </div>
+
+  <!-- EVENTS -->
+  <div class="section">
+    <h2 class="section-title">Upcoming Events</h2>
+    <div class="scroll-wrapper">
+
+      <a href="#" class="card">
+        <img src="https://picsum.photos/300/500?1" alt="">
+        <div class="card-content">Open House 2026</div>
+      </a>
+
+      <a href="#" class="card">
+        <img src="https://picsum.photos/300/500?2" alt="">
+        <div class="card-content">Parent Orientation</div>
+      </a>
+
+      <a href="#" class="card">
+        <img src="https://picsum.photos/300/500?3" alt="">
+        <div class="card-content">Art & Exploration Day</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- BLOGS -->
+  <div class="section">
+    <h2 class="section-title">From Our Classroom</h2>
+    <div class="scroll-wrapper">
+
+      <a href="#" class="card">
+        <img src="https://picsum.photos/300/500?4" alt="">
+        <div class="card-content">Confidence Through Play</div>
+      </a>
+
+      <a href="#" class="card">
+        <img src="https://picsum.photos/300/500?5" alt="">
+        <div class="card-content">Sensorial Learning</div>
+      </a>
+
+      <a href="#" class="card">
+        <img src="https://picsum.photos/300/500?6" alt="">
+        <div class="card-content">Independence in Early Years</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- SOCIALS -->
+  <div class="socials">
+
+    <!-- Website -->
+    <a href="#">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm7.93 9h-3.18a15.5 15.5 0 00-1.16-4.03A8.02 8.02 0 0119.93 11zM12 4c1.1 0 2.9 2.02 3.63 7H8.37C9.1 6.02 10.9 4 12 4zM4.07 13h3.18c.27 1.44.74 2.83 1.16 4.03A8.02 8.02 0 014.07 13zm3.18-2H4.07a8.02 8.02 0 014.52-4.03A15.5 15.5 0 007.25 11zm1.12 2h7.26C14.9 17.98 13.1 20 12 20s-2.9-2.02-3.63-7zm8.38 4.03A15.5 15.5 0 0016.75 13h3.18a8.02 8.02 0 01-4.52 4.03z"/>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="#">
+      <svg viewBox="0 0 24 24">
+        <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+      </svg>
+    </a>
+
+    <!-- YouTube -->
+    <a href="#">
+      <svg viewBox="0 0 24 24">
+        <path d="M21.8 8s-.2-1.4-.8-2a2.9 2.9 0 00-2-1C16.2 4.5 12 4.5 12 4.5h0s-4.2 0-7 .5a2.9 2.9 0 00-2 1c-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6c0 1.6.2 3.2.2 3.2s.2 1.4.8 2a2.9 2.9 0 002 1c2.8.5 7 .5 7 .5s4.2 0 7-.5a2.9 2.9 0 002-1c.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.6c0-1.6-.2-3.2-.2-3.2zM10 15.5v-7l6 3.5-6 3.5z"/>
+      </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a href="#">
+      <svg viewBox="0 0 24 24">
+        <path d="M22 12a10 10 0 10-11.5 9.9v-7H7v-3h3.5V9.5c0-3.4 2-5.3 5-5.3 1.4 0 2.8.2 2.8.2v3H17c-1.5 0-2 1-2 2v2.4h3.4l-.5 3H15v7A10 10 0 0022 12z"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="#">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 5 3.9 6 2.5 6S0 5 0 3.5 1.1 1 2.5 1 4.98 2 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.3 0 6.3 3.5 6.3 8v9.5h-5v-8.4c0-2-.03-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.4V24h-5V8z"/>
+      </svg>
+    </a>
+
+  </div>
+
+  <div class="footer-space"></div>
+
+</div>
+
+</body>
+</html>
