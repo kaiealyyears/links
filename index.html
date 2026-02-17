@@ -58,6 +58,19 @@
             background: white;
             border-radius: 24px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        .butterfly {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200%;
+            opacity: 0.07;
+            pointer-events: none;
+            z-index: 0;
+            animation: butterflyEntrance 0.8s ease-out 0.2s backwards;
         }
 
         /* Header with subtle animation */
@@ -65,11 +78,13 @@
             text-align: center;
             margin-bottom: 48px;
             animation: fadeSlideIn 0.8s ease-out;
+            position: relative;
+            z-index: 1;
         }
 
         .logo-mark {
             width: 100%;
-            max-width: 280px;
+            max-width: 200px;
             height: auto;
             margin: 0 auto 20px;
             display: flex;
@@ -100,6 +115,8 @@
         .primary-cta {
             margin-bottom: 48px;
             animation: fadeSlideIn 0.8s ease-out 0.2s backwards;
+            position: relative;
+            z-index: 1;
         }
 
         .cta-button {
@@ -147,6 +164,8 @@
         .section {
             margin-bottom: 40px;
             animation: fadeSlideIn 0.8s ease-out 0.4s backwards;
+            position: relative;
+            z-index: 1;
         }
 
         .section-title {
@@ -439,6 +458,8 @@
             padding-top: 32px;
             border-top: 1px solid rgba(162, 218, 218, 0.3);
             animation: fadeSlideIn 0.8s ease-out 0.8s backwards;
+            position: relative;
+            z-index: 1;
         }
 
         .footer-text {
@@ -482,6 +503,17 @@
             }
         }
 
+        @keyframes butterflyEntrance {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.85);
+            }
+            100% {
+                opacity: 0.07;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
         /* Responsive */
         @media (max-width: 480px) {
             .container {
@@ -500,18 +532,21 @@
 </head>
 <body>
     <div class="container">
+        <!-- Butterfly decoration -->
+        <img class="butterfly" src="https://kaiearlyyears.com/wp-content/uploads/2025/05/image2.png" alt="">
+
         <!-- Header -->
         <header class="header">
             <div class="logo-mark">
-                <img src="https://kaiearlyyears.com/wp-content/uploads/2025/07/Asset-1.png" alt="Kai Early Years">
+                <img src="https://kaiearlyyears.com/wp-content/uploads/2026/02/Kai-logo-Int-preschool-Daycare-scaled.png" alt="Kai Early Years">
             </div>
-            <p class="tagline">Transforming the Early Years</p>
+            <!--<p class="tagline">Transforming the Early Years</p>-->
         </header>
 
         <!-- Primary CTA -->
         <div class="primary-cta">
             <a href="https://kaiearlyyears.com/admissions-enquiry-form-new/" class="cta-button">
-                Admissions Enquiry
+                Begin the Kai Journey
             </a>
         </div>
 
@@ -527,22 +562,6 @@
                         <div class="event-description">Join us to celebrate International Mother Language Day</div>
                     </div>
                 </a>
-               <!-- <a href="https://kaiearlyyears.com/event-calendar/" class="event-card">
-                    <img src="event2.jpg" alt="Parent-Toddler Workshop" class="event-image">
-                    <div class="event-content">
-                        <div class="event-date">Feb 22, 2026</div>
-                        <div class="event-title">Parent-Toddler Workshop</div>
-                        <div class="event-description">Interactive session on early childhood development</div>
-                    </div>
-                </a>-->
-               <!-- <a href="https://kaiearlyyears.com/event-calendar/" class="event-card">
-                    <img src="event3.jpg" alt="Spring Garden Festival" class="event-image">
-                    <div class="event-content">
-                        <div class="event-date">Mar 1, 2026</div>
-                        <div class="event-title">Spring Garden Festival</div>
-                        <div class="event-description">Celebrate nature with our little learners</div>
-                    </div>
-                </a> -->
             </div>
         </section>
 
@@ -615,4 +634,9 @@
             <p class="footer-text">
                 Whitefield, Bangalore<br>
                 <a href="tel:+917204142123" class="footer-link">+91 72041 42123</a><br>
-                <a href="/cdn-cgi/l/email-protection#53303c3d3d3630271338323a3632213f2a2a363221207d303c3e" class="footer-link"><span class="__cf_email__" data-cfemail="0a6
+                <a href="mailto:connect@kaiearlyyears.com" class="footer-link">connect@kaiearlyyears.com</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
